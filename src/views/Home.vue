@@ -1,6 +1,15 @@
 <template>
   <div>
-    <v-data-table :headers="headers" :items="employees" item-key="Id" @click:row="goToEmployeeInfo"></v-data-table>
+    <v-text-field v-model="occupationFilter" label="Filter By Occupation"></v-text-field>
+    <v-data-table
+      :custom-filter="filterEmployee"
+      :headers="headers"
+      :items="employees"
+      :search="occupationFilter"
+      item-key="Id"
+      @click:row="goToEmployeeInfo"
+      :customFilter="filterEmployee"
+    ></v-data-table>
   </div>
 </template>
 
@@ -10,6 +19,7 @@ import axios from "axios" // Use axios for fetching data, if not available insta
 export default {
   data() {
     return {
+      occupationFilter: "",
       employees: [],
       headers: [
         { text: "First Name", value: "FirstName", align: "start", sortable: true },
@@ -35,6 +45,11 @@ export default {
     goToEmployeeInfo(item) {
       console.log("Item clicked:", item)
       this.$router.push({ name: "EmployeeInfo", params: { id: item.Id } })
+    },
+    filterEmployee(value, query, item) {
+      const filteredEmployee = item.Occupation.toLowerCase().includes(query.toLowerCase())
+      console.log(filteredEmployee)
+      return filteredEmployee
     },
   },
 }
