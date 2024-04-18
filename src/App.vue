@@ -1,12 +1,22 @@
 <template>
   <v-app>
-    <div>
-      <!-- Correct the router-link to use v-bind for the object syntax -->
-      <div v-if="$route.name !== 'home'">
-        <router-link :to="{ name: 'home' }">Home</router-link>
-      </div>
-    </div>
-    <router-view></router-view>
+    <v-navigation-drawer app permanent color="#fff">
+      <!-- Drawer content -->
+      <v-list>
+        <v-list-item :to="{ name: 'home' }" router exact>
+          <v-list-item-content>
+            <!--TO FIX-->
+            <v-icon>fas fa-house</v-icon>
+
+            <v-list-item-title class="text-center">Home</v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
+      </v-list>
+    </v-navigation-drawer>
+    <v-main class="main-content">
+      <!-- Main content -->
+      <router-view></router-view>
+    </v-main>
   </v-app>
 </template>
 
@@ -17,5 +27,8 @@ export default {
 </script>
 
 <style>
-/* Your styles here */
+.main-content {
+  background-color: #f4f7fe;
+}
+/* Additional styles */
 </style>

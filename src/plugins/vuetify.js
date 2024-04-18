@@ -1,8 +1,15 @@
 import Vue from "vue"
 import Vuetify from "vuetify"
-import "vuetify/dist/vuetify.min.css" // Ensure CSS for Vuetify is imported
+import "vuetify/dist/vuetify.min.css"
+import "@mdi/font/css/materialdesignicons.css"
+import "font-awesome/css/font-awesome.min.css"
 
 Vue.use(Vuetify)
 
-const opts = {} // Options can be specified here
+const opts = {
+  icons: {
+    iconfont: "fa",
+  },
+}
+
 export default new Vuetify(opts)

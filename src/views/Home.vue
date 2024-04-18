@@ -1,16 +1,20 @@
 <template>
-  <div>
-    <v-text-field v-model="occupationFilter" label="Filter By Occupation"></v-text-field>
-    <v-data-table
-      :custom-filter="filterEmployee"
-      :headers="headers"
-      :items="employees"
-      :search="occupationFilter"
-      item-key="Id"
-      @click:row="goToEmployeeInfo"
-      :customFilter="filterEmployee"
-    ></v-data-table>
-  </div>
+  <v-container>
+    <v-row>
+      <v-col cols="6" offset="3">
+        <v-text-field v-model="occupationFilter" label="Filter By Occupation"></v-text-field>
+        <v-data-table
+          :custom-filter="filterEmployee"
+          :headers="headers"
+          :items="employees"
+          :search="occupationFilter"
+          item-key="Id"
+          @click:row="goToEmployeeInfo"
+          :customFilter="filterEmployee"
+        ></v-data-table>
+      </v-col>
+    </v-row>
+  </v-container>
 </template>
 
 <script>

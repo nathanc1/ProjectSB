@@ -10,6 +10,7 @@
   "dependencies": {
     "@mdi/font": "^7.4.47",
     "axios": "^1.6.8",
+    "font-awesome": "^4.7.0",
     "vue": "^2.6.12",
     "vue-router": "^3.5.1",
     "vuetify": "^2.5.5"
