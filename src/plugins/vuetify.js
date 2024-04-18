@@ -1,12 +1,8 @@
-import "vuetify/styles" // Ensuring Vuetify's styles are loaded
-import { createVuetify } from "vuetify"
-import * as components from "vuetify/components"
-import * as directives from "vuetify/directives"
+import Vue from "vue"
+import Vuetify from "vuetify"
+import "vuetify/dist/vuetify.min.css" // Ensure CSS for Vuetify is imported
 
-const vuetify = createVuetify({
-  components,
-  directives,
-  // Your Vuetify configuration here
-})
+Vue.use(Vuetify)
 
-export default vuetify
+const opts = {} // Options can be specified here
+export default new Vuetify(opts)
