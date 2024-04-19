@@ -27,7 +27,12 @@
                 readonly
               ></v-text-field>
               <div class="text-center">
-                <v-date-picker v-model="pickedEmploymentDate" @input="checkEmploymentDate"></v-date-picker>
+                <v-date-picker
+                  v-model="pickedEmploymentDate"
+                  @input="checkEmploymentDate"
+                  :prev-icon="'mdi-chevron-left'"
+                  :next-icon="'mdi-chevron-right'"
+                ></v-date-picker>
               </div>
               <p class="font-weight-black text-h4 text-center" v-if="employmentDateMessage">
                 {{ employmentDateMessage }}
@@ -47,7 +52,12 @@
                 readonly
               ></v-text-field>
               <div class="text-center">
-                <v-date-picker v-model="pickedTerminationDate" @input="checkTerminationDate"></v-date-picker>
+                <v-date-picker
+                  v-model="pickedTerminationDate"
+                  @input="checkTerminationDate"
+                  :prev-icon="'mdi-chevron-left'"
+                  :next-icon="'mdi-chevron-right'"
+                ></v-date-picker>
               </div>
               <p class="font-weight-black text-h4 text-center" v-if="terminationDateMessage">
                 {{ terminationDateMessage }}
@@ -125,6 +135,7 @@ export default {
     },
   },
   created() {
+    debugger
     this.loadEmployeeDetails()
   },
 }

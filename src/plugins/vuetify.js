@@ -6,10 +6,4 @@ import "font-awesome/css/font-awesome.min.css"
 
 Vue.use(Vuetify)
 
-const opts = {
-  icons: {
-    iconfont: "fa",
-  },
-}
-
-export default new Vuetify(opts)
+export default new Vuetify()
