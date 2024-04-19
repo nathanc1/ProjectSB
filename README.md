@@ -1,7 +1,9 @@
-# Vue 3 + Vite
+# Vue 2
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+This template should help get you started developing with Vue 2. The template uses Vue 2 options API, which is the standard for this version.]
 
-## Recommended IDE Setup
+## Running the Project
 
-- [VS Code](https://code.visualstudio.com/) + [Vue - Official](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (previously Volar) and disable Vetur
+Use the following command to serve your project locally:
+
+npm run serve
